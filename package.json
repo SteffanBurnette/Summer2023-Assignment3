@@ -1,0 +1,15 @@
+{
+  "name": "Summer2023-Assignment3",
+  "version": "1.0.0",
+  "description": "- Show understanding of json testing by creating basic math functions and tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
