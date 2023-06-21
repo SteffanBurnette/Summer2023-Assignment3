@@ -1,10 +1,11 @@
 //Gave it a starting object to help with testing
-const cartObj=[{'name':"cheese", amount:3}];
+const cartObj=[{'name':"cheese", amount:3, cost:5}];
 
-function addToCart(item, quantity){
+function addToCart(item, quantity, price){
     let tempObj={
         name:item,
-        amount:quantity
+        amount:quantity,
+        cost:price
     };
    cartObj.push(tempObj);
    return cartObj;
@@ -25,10 +26,12 @@ function calculateTotal(){
     let price=0;
     for(let i=0;i<cartObj.length;i++){
         
-        price+=cartObj[i].amount;
+        price+=(cartObj[i].amount*cartObj[i].cost);
     }
     
     return price;
 }
 
 module.exports={addToCart, removeFromCart, calculateTotal};
+
+console.log(calculateTotal());
